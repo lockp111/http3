@@ -26,10 +26,10 @@ import (
 	"github.com/cloudwego/hertz/pkg/network/netpoll"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"github.com/cloudwego/hertz/pkg/protocol/suite"
-	"github.com/hertz-contrib/http3/network/quic-go"
-	"github.com/hertz-contrib/http3/network/quic-go/testdata"
-	http3 "github.com/hertz-contrib/http3/server/quic-go"
-	"github.com/hertz-contrib/http3/server/quic-go/factory"
+	"github.com/lockp111/http3/network/quic-go"
+	"github.com/lockp111/http3/network/quic-go/testdata"
+	http3 "github.com/lockp111/http3/server/quic-go"
+	"github.com/lockp111/http3/server/quic-go/factory"
 )
 
 type Test struct {

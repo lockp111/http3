@@ -20,7 +20,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/common/hlog"
 	"github.com/cloudwego/hertz/pkg/protocol"
 	"github.com/cloudwego/hertz/pkg/protocol/suite"
-	http3 "github.com/hertz-contrib/http3/server/quic-go"
+	http3 "github.com/lockp111/http3/server/quic-go"
 )
 
 var _ suite.StreamServerFactory = &serverFactory{}

@@ -28,8 +28,19 @@ type conn struct {
 	quicgo.EarlyConnection
 }
 
+// HandshakeComplete implements network.StreamConn.
+// Subtle: this method shadows the method (EarlyConnection).HandshakeComplete of conn.EarlyConnection.
+func (c *conn) HandshakeComplete() context.Context {
+	ctx, cancel := context.WithCancel(context.Background())
+	go func() {
+		<-c.EarlyConnection.HandshakeComplete()
+		cancel()
+	}()
+	return ctx
+}
+
 type versioner interface {
-	GetVersion() quicgo.VersionNumber
+	GetVersion() quicgo.Version
 }
 
 func (c *conn) GetVersion() uint32 {
