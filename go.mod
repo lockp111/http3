@@ -1,4 +1,4 @@
-module github.com/hertz-contrib/http3
+module github.com/lockp111/http3
 
 go 1.19
 
